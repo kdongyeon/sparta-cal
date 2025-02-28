@@ -70,7 +70,7 @@ public class Calculator {
             String end = scanner.nextLine();
             if (end.equals("exit")) {
                 exit = false;
-                System.out.println("계산기 종료");
+                System.out.println("계산기 종료");   // 종료
             }
         }
     }
