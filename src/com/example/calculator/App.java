@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     package com.example.calculator;
 
-    public class Calculator {
+    public class App {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);  // 입출력 Scanner 객체 소환
 
