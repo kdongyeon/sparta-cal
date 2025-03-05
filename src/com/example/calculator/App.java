@@ -5,36 +5,44 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        List<Integer> resultList = new ArrayList<>();
 
         Calculator cal = new Calculator();
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        /* 반복문 시작 */                                        
+        /* 반복문 시작 */
         boolean exit = true;
         int num1;
         int num2;
         while (exit) {    // exit 값이 true 일때만 반복
-            while (true) {
+            while (exit) {
                 System.out.println("첫 번째 값을 입력 :");
-                num1 = scanner.nextInt();         // 숫자(정수) 입력받기!
+                num1 = sc.nextInt();         // 숫자(정수) 입력받기!
                 if (num1 < 0) {
                     System.out.println("양의 정수만 입력하세요");
                     continue;
                 }
 
                 System.out.println("두 번째 값을 입력 :");
-                num2 = scanner.nextInt();
+                num2 = sc.nextInt();
                 if (num2 < 0) {
                     System.out.println("양의 정수만 입력하세요");
                     continue;
                 }
-                break;
+
+
 
                 System.out.println("+,-,*,/ 중에 하나만 입력하세요.");
-                                String operation = scanner.next();
+                char operation = sc.next().charAt(0);
+
+                // 연산 후 결과 //
+
+                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                String end = sc.nextLine();
+                if (end.equals("exit")) {
+                    exit = false;
+                    System.out.println("계산기 종료");   // 종료
+                }
             }
-
         }
-
     }
+}
