@@ -21,15 +21,12 @@ public class App {
                     System.out.println("양의 정수만 입력하세요");
                     continue;
                 }
-
                 System.out.println("두 번째 값을 입력 :");
                 num2 = sc.nextInt();
                 if (num2 < 0) {
                     System.out.println("양의 정수만 입력하세요");
                     continue;
                 }
-
-
 
                 System.out.println("+,-,*,/ 중에 하나만 입력하세요.");
                 char operation = sc.next().charAt(0);
