@@ -60,7 +60,8 @@ public class Calculator {
                         break;
                     default:
                         System.out.println("연산자 기호를 잘못입력했습니다.");
-                        continue;
+
+
                 }
                 break;
 
