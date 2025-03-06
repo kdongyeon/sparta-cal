@@ -2,9 +2,11 @@ package com.example.calculator;
 
 public class Calculator {
 
-        public int startCal(int num1, int num2, char operation){
 
-        int result = 0;
+    // 계산 메서드
+    static int startCal(int num1, int num2, char operation){
+
+        int result=0;
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -28,9 +30,9 @@ public class Calculator {
             default:
                 System.out.println("연산자 기호를 잘못입력했습니다.");
 
-
         }
             return result;
+
         }
 
 }
