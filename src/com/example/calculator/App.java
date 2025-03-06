@@ -10,10 +10,9 @@ public class App {
 
         /* 반복문 시작 */
 
-
         // exit 값이 true 일때만 반복
-        String exit = "";
-        while (exit.equals("exit")) {
+
+        while (true) {
             System.out.println("첫 번째 값을 입력 :");
             int num1 = sc.nextInt();         // 숫자(정수) 입력받기!
             if (num1 < 0) {
@@ -31,13 +30,14 @@ public class App {
             char operation = sc.next().charAt(0);
 
             // 연산 후 결과 //
-            int result = Calculator.startCal(num1, num2, operation);
+            int result = cal.startCal(num1, num2, operation);
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String end = sc.nextLine();
 
             if (end.equals("exit")) {
                 System.out.println("계산기 종료");
+                return;
                 // 종료
             }
         }

@@ -7,8 +7,8 @@ public class Calculator {
     private final List<Integer> resultList = new ArrayList<>();
 
     // 계산 메서드
-    public static int startCal(int num1, int num2, char operation) {
 
+    public int startCal(int num1, int num2, char operation) {
         int result;
         switch (operation) {
             case '+':
@@ -32,11 +32,12 @@ public class Calculator {
                 break;
             default:
                 System.out.println("연산자 기호를 잘못입력했습니다.");
-                return result;
+
         }
+        return result;
     }
         //Setter
-        public void setResultList (Integer result){
+        public void setResultList (int result){
             this.resultList.add(result);
         }
 
