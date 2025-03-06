@@ -3,13 +3,14 @@ package com.example.calculator;
 import java.util.ArrayList;
 import java.util.List;
 
+// 사칙연산 수행 후 연산 결과를 저장하는 컬렉션 타입 필드를 가진 Calculator 클래스 생성
 public class Calculator {
     private final List<Integer> resultList = new ArrayList<>();
 
     // 계산 메서드
-
+int result;
     public int startCal(int num1, int num2, char operation) {
-        int result;
+
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -32,6 +33,7 @@ public class Calculator {
                 break;
             default:
                 System.out.println("연산자 기호를 잘못입력했습니다.");
+                break;
 
         }
         return result;

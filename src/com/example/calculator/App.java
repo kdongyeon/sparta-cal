@@ -25,20 +25,21 @@ public class App {
                 System.out.println("양의 정수만 입력하세요");
                 continue;
             }
+
             //사칙연산 기호 입력받기
             System.out.println("+,-,*,/ 중에 하나만 입력하세요.");
             char operation = sc.next().charAt(0);
 
-            // 연산 후 결과 //
+            // 연산 결과 Calculator 클래스 담당 //
             int result = cal.startCal(num1, num2, operation);
+
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String end = sc.nextLine();
-
             if (end.equals("exit")) {
                 System.out.println("계산기 종료");
-                return;
-                // 종료
+
+
             }
         }
     }
