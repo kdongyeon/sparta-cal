@@ -35,9 +35,10 @@ public class App {
 
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            String end = sc.nextLine();
+            String end = sc.next();
             if (end.equals("exit")) {
                 System.out.println("계산기 종료");
+                break;
 
 
             }

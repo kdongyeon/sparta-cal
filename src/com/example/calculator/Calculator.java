@@ -8,9 +8,9 @@ public class Calculator {
     private final List<Integer> resultList = new ArrayList<>();
 
     // 계산 메서드
-int result;
-    public int startCal(int num1, int num2, char operation) {
 
+    public int startCal(int num1, int num2, char operation) {
+        int result = 0;
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -38,6 +38,7 @@ int result;
         }
         return result;
     }
+
         //Setter
         public void setResultList (int result){
             this.resultList.add(result);
