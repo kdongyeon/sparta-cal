@@ -1,12 +1,15 @@
 package com.example.calculator;
 
-public class Calculator {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Calculator {
+    private final List<Integer> resultList = new ArrayList<>();
 
     // 계산 메서드
-    static int startCal(int num1, int num2, char operation){
+    public static int startCal(int num1, int num2, char operation) {
 
-        int result=0;
+        int result;
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -29,10 +32,21 @@ public class Calculator {
                 break;
             default:
                 System.out.println("연산자 기호를 잘못입력했습니다.");
-
+                return result;
         }
-            return result;
-
+    }
+        //Setter
+        public void setResultList (Integer result){
+            this.resultList.add(result);
         }
 
-}
+        //Getter
+        public List<Integer> getResultlist () {
+            return this.resultList;
+        }
+
+        //가장 먼저 저장된 데이터를 삭제하는 기능
+        public void removeResult () {
+            this.resultList.remove(0);
+        }
+    }
